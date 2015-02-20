@@ -1,0 +1,16 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "dependencies": {
+    "font-awesome": ">=4.0.0",
+    "durandal": ">=2.0.0",
+    "durandal-almond": "master",
+    "json2": "*",
+    "kendo-ui": "~2014.3.1328"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "should": "3.1.2",
+    "sinon": "http://sinonjs.org/releases/sinon-1.8.1.js"
+  }
+}

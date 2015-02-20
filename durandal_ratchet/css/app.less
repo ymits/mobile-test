@@ -1,0 +1,145 @@
+﻿﻿body {
+    /*padding-top: 70px;*/
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.durandal-wrapper {
+    .wrapper;
+}
+
+#applicationHost {
+    .splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #ccc;
+        text-align: center;
+
+        h1 {
+            font-variant: small-caps;
+            padding: 100px 0;
+            margin: 0;
+        }
+    }
+}
+
+.router-loader {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+
+    i {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+}
+
+drawer {
+    .wrapper;
+
+    & > .side-nav {
+        .wrapper;
+
+        position: absolute;
+        opacity: 0;
+        width: 250px;
+        -webkit-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+        transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+
+        &.opening　{
+            opacity: 0.9;
+        }
+
+        &.open {
+            opacity: 1;
+        }
+    }
+
+    & > .main {
+        .wrapper;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+        -webkit-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+        transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+
+        & > .mask {
+            .wrapper;
+
+            opacity: 0.2;
+            display: none;
+            z-index: 20;
+        }
+
+        &.opening, &.open {
+            & > .mask {
+                display: block;
+            }
+        }
+
+        &.open {
+            & > .mask {
+                background-color: #000000;
+            }
+        }
+    }
+}
+
+.sideMenu {
+    .wrapper;
+
+    margin-bottom: 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+
+    &>li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+scroll-tab{
+    .scroll-area {
+        overflow: hidden;
+
+        .nav-tab {
+            margin-top: 11px;
+            -webkit-transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+            transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+            white-space: nowrap;
+
+            & > li > a {
+                padding-right: 20px;
+                padding-left: 20px;
+
+                &.active {
+                    background-color: #fff;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+    }
+
+    .hide {
+        visibility: hidden;
+    }
+}
+
